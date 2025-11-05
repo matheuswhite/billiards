@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8ali5gkj6u7x"]
+
+[ext_resource type="PackedScene" uid="uid://bl0v2olhbqr1" path="res://table.tscn" id="1_e2o6t"]
+[ext_resource type="Script" uid="uid://buryci3fj4r0x" path="res://camera_3d.gd" id="2_7jktm"]
+[ext_resource type="PackedScene" uid="uid://cesop87gf3j7y" path="res://cue.tscn" id="2_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://gg3m4v2ncnw7" path="res://ball.tscn" id="2_feb5d"]
+[ext_resource type="Texture2D" uid="uid://bfnrr27xtmyt1" path="res://assets/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png" id="5_ryrav"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fc0e3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_7jktm"]
+sky_material = SubResource("ProceduralSkyMaterial_fc0e3")
+
+[sub_resource type="Environment" id="Environment_ryrav"]
+background_mode = 2
+sky = SubResource("Sky_7jktm")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
+albedo_texture = ExtResource("5_ryrav")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+uv1_scale = Vector3(0.3, 0.15, 1)
+uv1_offset = Vector3(0, 0.835, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
+albedo_texture = ExtResource("5_ryrav")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+uv1_scale = Vector3(0.3, 0.15, 1)
+uv1_offset = Vector3(0, 0.334, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eow3j"]
+albedo_texture = ExtResource("5_ryrav")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+uv1_scale = Vector3(0.333, 0.167, 1)
+uv1_offset = Vector3(0.333, 0.334, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5wjh"]
+albedo_texture = ExtResource("5_ryrav")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+uv1_scale = Vector3(0.3, 0.15, 1)
+uv1_offset = Vector3(0.666, 0.334, 0)
+
+[node name="Game" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ryrav")
+
+[node name="table" parent="." instance=ExtResource("1_e2o6t")]
+
+[node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("white_ball")]
+transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.5591929, 0, -0.5591929, 0.8290376, 0, 135, 92)
+current = true
+script = ExtResource("2_7jktm")
+white_ball = NodePath("../white_ball")
+
+[node name="Cue" parent="Camera3D" instance=ExtResource("2_fc0e3")]
+transform = Transform3D(1, 0, 0, 0, -1.0000002, -8.74228e-08, 0, 8.74228e-08, -1.0000002, 1.0355482, -6.1890945, 131.43866)
+visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.99469, 114.444466, 75.70529)
+light_color = Color(1, 0.827451, 0.2, 1)
+light_energy = 1.412
+light_specular = 3.5
+shadow_enabled = true
+spot_range = 100.0
+spot_attenuation = -0.3
+spot_angle = 41.65
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.99469, 114.444466, -0.01537323)
+light_color = Color(1, 0.827451, 0.2, 1)
+light_energy = 1.412
+light_specular = 3.5
+shadow_enabled = true
+spot_range = 100.0
+spot_attenuation = -0.3
+spot_angle = 41.65
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.99469, 114.444466, -75.15068)
+light_color = Color(1, 0.827451, 0.2, 1)
+light_energy = 1.412
+light_specular = 3.5
+shadow_enabled = true
+spot_range = 100.0
+spot_attenuation = -0.3
+spot_angle = 41.65
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.7071068, 0.64597416, 0.2876063, 0, -0.4067367, 0.9135454, 0.7071068, -0.64597416, -0.2876063, 0, 200, 0)
+light_angular_distance = 5.0
+shadow_enabled = true
+shadow_opacity = 0.45
+shadow_blur = 0.7
+directional_shadow_mode = 0
+
+[node name="white_ball" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, 0, 74.2, 57.098)
+material = SubResource("StandardMaterial3D_7jktm")
+
+[node name="ball7" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4701805, 74.2, 96.45674)
+material = SubResource("StandardMaterial3D_ryrav")
+
+[node name="ball8" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(0.25881907, 0, 0.96592575, 0, 0.9999999, 0, -0.96592575, 0, 0.258819, 0, 74.29718, -60.567)
+material = SubResource("StandardMaterial3D_eow3j")
+
+[node name="ball9" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 3.747013, 74.2, 96.456726)
+material = SubResource("StandardMaterial3D_j5wjh")
