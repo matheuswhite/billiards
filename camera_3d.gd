@@ -21,4 +21,4 @@ func _input(event: InputEvent) -> void:
 			global_position += global_basis.z * speed
 	elif event is InputEventKey:
 		if event.is_released() and event.keycode == KEY_SPACE:
-			white_ball.apply_impulse(Vector3(0, 0, -50), Vector3(0, 1, 0))
+			white_ball.apply_impulse(Vector3(0, 0, -200), Vector3(0, 1, 0))

@@ -111,13 +111,13 @@ transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, 0, 7
 material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="ball7" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4701805, 74.2, 96.45674)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.985073, 74.2, -67.97948)
 material = SubResource("StandardMaterial3D_ryrav")
 
 [node name="ball8" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(0.25881907, 0, 0.96592575, 0, 0.9999999, 0, -0.96592575, 0, 0.258819, 0, 74.29718, -60.567)
+transform = Transform3D(0.25881907, 0, 0.96592575, 0, 0.9999999, 0, -0.96592575, 0, 0.258819, -1, 74.2, -60.567)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="ball9" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 3.747013, 74.2, 96.456726)
+transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 3.2321205, 74.2, -67.97949)
 material = SubResource("StandardMaterial3D_j5wjh")

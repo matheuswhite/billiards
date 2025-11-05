@@ -1,5 +1,5 @@
 @tool
-extends Node3D
+extends RigidBody3D
 
 @export var material: StandardMaterial3D:
 	set(value):
@@ -21,4 +21,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if linear_velocity.y > 0:
+		linear_velocity.y = 0
