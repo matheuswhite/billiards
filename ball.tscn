@@ -22,6 +22,7 @@ radius = 3.5
 
 [node name="ball" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_x8fbi")
+gravity_scale = 5.0
 max_contacts_reported = 4
 linear_damp = 0.5
 angular_damp = 0.5

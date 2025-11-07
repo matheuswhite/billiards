@@ -2,7 +2,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_xapjj"]
 font_size = 100
-font_color = Color(5.0055983e-06, 0.7028996, 0.29167417, 1)
+font_color = Color(0, 0.5686275, 0.11372549, 1)
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -11,6 +11,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

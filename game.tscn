@@ -200,7 +200,7 @@ white_ball = NodePath("../ball_white")
 camera = NodePath("../Camera3D")
 
 [node name="ball_white" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, 0, 74.2, 57.098)
+transform = Transform3D(0.8660255, 0, 0.50000006, -0.12940954, 0.96592575, 0.22414389, -0.482963, -0.258819, 0.8365164, 0, 74.2, 57.098)
 material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="ball1" parent="." instance=ExtResource("2_feb5d")]
@@ -208,59 +208,59 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 7
 material = SubResource("StandardMaterial3D_ryrav")
 
 [node name="ball2" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.9999999, 0, -1, 0, -4.371139e-08, -4.894943, 74.2, -65.88063)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.9999999, 0, -1, 0, -4.371139e-08, -3.9, 74.2, -66)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="ball3" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 4.765518, 74.2, -66.1007)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.9, 74.2, -66)
 material = SubResource("StandardMaterial3D_j5wjh")
 
 [node name="ball4" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -9.272508, 74.2, -71.86696)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -7.4, 74.2, -72.3)
 material = SubResource("StandardMaterial3D_80cx4")
 
 [node name="ball5" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0.08163738, 74.2, -71.959236)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0, 74.2, -72.3)
 material = SubResource("StandardMaterial3D_xex6t")
 
 [node name="ball6" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 9.784114, 74.2, -72.06646)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 7.4, 74.2, -72.3)
 material = SubResource("StandardMaterial3D_aa0lp")
 
 [node name="ball7" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -14.214513, 74.2, -77.50631)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -11.3, 74.2, -78.5)
 material = SubResource("StandardMaterial3D_iu0sx")
 
 [node name="ball8" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -4.6229677, 74.2, -77.84736)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -3.9, 74.2, -78.5)
 material = SubResource("StandardMaterial3D_4v2jo")
 
 [node name="ball9" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 5.060561, 74.2, -77.5718)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 3.9, 74.2, -78.5)
 material = SubResource("StandardMaterial3D_l1i01")
 
 [node name="ball10" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 15.24921, 74.2, -77.56411)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 11.3, 74.2, -78.5)
 material = SubResource("StandardMaterial3D_r62pu")
 
 [node name="ball11" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -18.478516, 74.2, -83.94613)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -14.8, 74.2, -85)
 material = SubResource("StandardMaterial3D_klri6")
 
 [node name="ball12" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -9.717641, 74.2, -84.2372)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -7.4, 74.2, -85)
 material = SubResource("StandardMaterial3D_eu6ph")
 
 [node name="ball13" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0.36790347, 74.2, -84.19889)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0, 74.2, -85)
 material = SubResource("StandardMaterial3D_edr7y")
 
 [node name="ball14" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 10.5876, 74.2, -84.080124)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 7.4, 74.2, -85)
 material = SubResource("StandardMaterial3D_kq12w")
 
 [node name="ball15" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 20.569899, 74.2, -84.44398)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 14.8, 74.2, -85)
 material = SubResource("StandardMaterial3D_t46w6")
 
 [node name="HUD" type="Control" parent="."]

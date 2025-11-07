@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bl0v2olhbqr1"]
+[gd_scene load_steps=15 format=3 uid="uid://bl0v2olhbqr1"]
 
 [ext_resource type="Texture2D" uid="uid://b76m0s3ki057p" path="res://assets/10523_Pool_Table_v1_Diffuse.jpg" id="1_v5i0k"]
 [ext_resource type="ArrayMesh" uid="uid://w426cm8xr8wx" path="res://assets/table.obj" id="2_kl0hw"]
@@ -19,6 +19,9 @@ size = Vector3(88.78667, 24, 14.602295)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kl0hw"]
 size = Vector3(99.59628, 24, 13.501465)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vjl2i"]
+absorbent = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vjl2i"]
 size = Vector3(18.712646, 12.920166, 4.5410156)
@@ -72,6 +75,7 @@ shape = SubResource("BoxShape3D_kl0hw")
 
 [node name="hole1" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.697983, 75.861115, -115.10396)
+physics_material_override = SubResource("PhysicsMaterial_vjl2i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hole1"]
 transform = Transform3D(0.69326353, 0, -0.72068423, 0, 1, 0, 0.72068423, 0, 0.69326353, 3.9149094, 0, -7.953331)
@@ -115,6 +119,7 @@ shape = SubResource("BoxShape3D_vjl2i")
 
 [node name="hole2" type="StaticBody3D" parent="."]
 transform = Transform3D(0.13047431, 0, -0.9914517, 0, 1, 0, 0.9914517, 0, 0.13047431, 52.4887, 75.861115, -115.169334)
+physics_material_override = SubResource("PhysicsMaterial_vjl2i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hole2"]
 transform = Transform3D(0.69326353, 0, -0.72068423, 0, 1, 0, 0.72068423, 0, 0.69326353, 3.9149094, 0, -7.953331)
@@ -158,6 +163,7 @@ shape = SubResource("BoxShape3D_vjl2i")
 
 [node name="hole3" type="StaticBody3D" parent="."]
 transform = Transform3D(-0.99670565, 0, -0.08110355, 0, 1, 0, 0.08110355, 0, -0.99670565, 52.583992, 75.861115, 114.77487)
+physics_material_override = SubResource("PhysicsMaterial_vjl2i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hole3"]
 transform = Transform3D(0.69326353, 0, -0.72068423, 0, 1, 0, 0.72068423, 0, 0.69326353, 3.9149094, 0, -7.953331)
@@ -201,6 +207,7 @@ shape = SubResource("BoxShape3D_vjl2i")
 
 [node name="hole4" type="StaticBody3D" parent="."]
 transform = Transform3D(-0.10524016, 0, 0.9944469, 0, 1, 0, -0.9944469, 0, -0.10524016, -52.719322, 75.861115, 115.20574)
+physics_material_override = SubResource("PhysicsMaterial_vjl2i")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="hole4"]
 transform = Transform3D(0.69326353, 0, -0.72068423, 0, 1, 0, 0.72068423, 0, 0.69326353, 3.9149094, 0, -7.953331)
@@ -244,6 +251,7 @@ shape = SubResource("BoxShape3D_vjl2i")
 
 [node name="hole5" type="StaticBody3D" parent="."]
 transform = Transform3D(0.67987657, 0, 0.73332655, 0, 1, 0, -0.73332655, 0, 0.67987657, -53.72603, 75.861115, -0.6182879)
+physics_material_override = SubResource("PhysicsMaterial_vjl2i")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="hole5"]
 transform = Transform3D(0.9048346, 0, -0.42576346, 0, 1, 0, 0.42576346, 0, 0.9048346, -1.4358139, 0, -9.227718)
@@ -279,6 +287,7 @@ shape = SubResource("BoxShape3D_vjl2i")
 
 [node name="hole6" type="StaticBody3D" parent="."]
 transform = Transform3D(-0.67944133, 0, -0.73372984, 0, 1, 0, 0.73372984, 0, -0.67944133, 53.74088, 75.861115, 0.6042867)
+physics_material_override = SubResource("PhysicsMaterial_vjl2i")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="hole6"]
 transform = Transform3D(0.9048346, 0, -0.42576346, 0, 1, 0, 0.42576346, 0, 0.9048346, -1.4358139, 0, -9.227718)
