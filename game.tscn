@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://c8ali5gkj6u7x"]
+[gd_scene load_steps=14 format=3 uid="uid://c8ali5gkj6u7x"]
 
 [ext_resource type="PackedScene" uid="uid://bl0v2olhbqr1" path="res://table.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://buryci3fj4r0x" path="res://camera_3d.gd" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://cesop87gf3j7y" path="res://cue.tscn" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://gg3m4v2ncnw7" path="res://ball.tscn" id="2_feb5d"]
 [ext_resource type="Texture2D" uid="uid://bfnrr27xtmyt1" path="res://assets/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png" id="5_ryrav"]
+[ext_resource type="Script" uid="uid://bgna3p4ynwll8" path="res://cue_force.gd" id="6_ryrav"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fc0e3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -59,14 +60,13 @@ environment = SubResource("Environment_ryrav")
 [node name="table" parent="." instance=ExtResource("1_e2o6t")]
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("white_ball")]
-transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.5591929, 0, -0.5591929, 0.8290376, -1.5345688, 135, 92)
+transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.5591929, 0, -0.5591929, 0.8290376, -1.5345688, 94.63759, 77.53363)
 current = true
 script = ExtResource("2_7jktm")
 white_ball = NodePath("../white_ball")
 
 [node name="Cue" parent="Camera3D" instance=ExtResource("2_fc0e3")]
-transform = Transform3D(1, 0, 0, 0, -1.0000002, -8.940697e-08, 0, 8.940697e-08, -1.0000002, 0.13072109, -27.438652, 102.61435)
-visible = false
+transform = Transform3D(1, 0, 0, 0, -0.9128202, 0.40836227, 0, -0.40836227, -0.9128202, 0, -70.587296, 115.189255)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.99469, 114.444466, 75.70529)
@@ -121,3 +121,25 @@ material = SubResource("StandardMaterial3D_eow3j")
 [node name="ball9" parent="." instance=ExtResource("2_feb5d")]
 transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 3.2321205, 74.2, -67.97949)
 material = SubResource("StandardMaterial3D_j5wjh")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="HUD"]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 313.0
+offset_right = 1130.0
+offset_bottom = 593.0
+color = Color(0.26666668, 0.6784314, 0.11372549, 1)
+
+[node name="CueForce" type="ColorRect" parent="HUD/ColorRect" node_paths=PackedStringArray("camera")]
+layout_mode = 0
+offset_right = 30.0
+offset_bottom = 280.0
+color = Color(0.21176471, 0.21176471, 0.21176471, 1)
+script = ExtResource("6_ryrav")
+camera = NodePath("../../../Camera3D")

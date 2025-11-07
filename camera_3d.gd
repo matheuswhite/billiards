@@ -5,11 +5,14 @@ var azimuth: float = 0.0
 var elevation: float = PI / 4
 var sensitivity: float = 0.05
 var direction: Vector3 = Vector3(0, 0, -1)
+var impulse_timer: float = 0.0;
+const impulse_max_time: float = 3;
+var impulse_force: float = 0.0;
+var impulse_dir: float = 1.0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -23,7 +26,17 @@ func _process(delta: float) -> void:
 		elevation += sensitivity
 	if Input.is_key_pressed(KEY_DOWN):
 		elevation -= sensitivity
+	if Input.is_key_pressed(KEY_SPACE):
+		impulse_timer += delta * impulse_dir
+		impulse_force = impulse_timer / impulse_max_time
 		
+		if impulse_force > 1.0:
+			impulse_dir = -1.0;
+			impulse_timer = impulse_max_time
+		if impulse_force < 0.0:
+			impulse_dir = 1.0
+			impulse_timer = 0.0
+
 	elevation = clampf(elevation, 0, PI / 3)
 
 	var x = distance * cos(elevation) * sin(azimuth)
@@ -37,4 +50,6 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_released() and event.keycode == KEY_SPACE:
-			white_ball.apply_impulse(direction * 200, Vector3(0, 1, 0))
+			white_ball.apply_impulse(direction * impulse_force * 200, Vector3(0, 1, 0))
+			impulse_timer = 0
+			impulse_force = 0
