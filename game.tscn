@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://c8ali5gkj6u7x"]
+[gd_scene load_steps=15 format=3 uid="uid://c8ali5gkj6u7x"]
 
 [ext_resource type="PackedScene" uid="uid://bl0v2olhbqr1" path="res://table.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://buryci3fj4r0x" path="res://camera_3d.gd" id="2_7jktm"]
 [ext_resource type="PackedScene" uid="uid://cesop87gf3j7y" path="res://cue.tscn" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://gg3m4v2ncnw7" path="res://ball.tscn" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://c40x0ikjjnvo" path="res://cue.gd" id="4_eow3j"]
 [ext_resource type="Texture2D" uid="uid://bfnrr27xtmyt1" path="res://assets/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png" id="5_ryrav"]
 [ext_resource type="Script" uid="uid://bgna3p4ynwll8" path="res://cue_force.gd" id="6_ryrav"]
 
@@ -65,8 +66,11 @@ current = true
 script = ExtResource("2_7jktm")
 white_ball = NodePath("../white_ball")
 
-[node name="Cue" parent="Camera3D" instance=ExtResource("2_fc0e3")]
+[node name="Cue" parent="Camera3D" node_paths=PackedStringArray("white_ball", "camera") instance=ExtResource("2_fc0e3")]
 transform = Transform3D(1, 0, 0, 0, -0.9128202, 0.40836227, 0, -0.40836227, -0.9128202, 0, -70.587296, 115.189255)
+script = ExtResource("4_eow3j")
+white_ball = NodePath("../../white_ball")
+camera = NodePath("..")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.99469, 114.444466, 75.70529)

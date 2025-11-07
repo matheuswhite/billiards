@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bl0v2olhbqr1"]
+[gd_scene load_steps=11 format=3 uid="uid://bl0v2olhbqr1"]
 
 [ext_resource type="Texture2D" uid="uid://b76m0s3ki057p" path="res://assets/10523_Pool_Table_v1_Diffuse.jpg" id="1_v5i0k"]
 [ext_resource type="ArrayMesh" uid="uid://w426cm8xr8wx" path="res://assets/table.obj" id="2_kl0hw"]
@@ -22,8 +22,12 @@ size = Vector3(99.59628, 24, 13.501465)
 [sub_resource type="BoxShape3D" id="BoxShape3D_vjl2i"]
 size = Vector3(18.712646, 12.920166, 4.5410156)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_kl0hw"]
+rough = true
+absorbent = true
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5i0k"]
-size = Vector3(100.615234, 13, 216.53687)
+size = Vector3(100.615234, 13, 223.24658)
 
 [node name="table" type="Node3D"]
 
@@ -302,7 +306,8 @@ transform = Transform3D(-0.33773613, 0, 0.9412409, 0, 1, 0, -0.9412409, 0, -0.33
 shape = SubResource("BoxShape3D_vjl2i")
 
 [node name="base" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_kl0hw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64, -0.10827637)
 shape = SubResource("BoxShape3D_v5i0k")

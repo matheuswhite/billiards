@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://yxvue3xhiaav" path="res://ball.gd" id="1_x8fbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
-bounce = 0.3
+bounce = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8fbi"]
 albedo_color = Color(0, 0.6851034, 0.8019823, 1)
@@ -22,8 +22,9 @@ radius = 3.5
 
 [node name="ball" type="RigidBody3D"]
 physics_material_override = SubResource("PhysicsMaterial_x8fbi")
-center_of_mass_mode = 1
 max_contacts_reported = 4
+linear_damp = 0.5
+angular_damp = 0.5
 script = ExtResource("1_x8fbi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
