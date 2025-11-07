@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://bl0v2olhbqr1"]
+[gd_scene load_steps=14 format=3 uid="uid://bl0v2olhbqr1"]
 
 [ext_resource type="Texture2D" uid="uid://b76m0s3ki057p" path="res://assets/10523_Pool_Table_v1_Diffuse.jpg" id="1_v5i0k"]
 [ext_resource type="ArrayMesh" uid="uid://w426cm8xr8wx" path="res://assets/table.obj" id="2_kl0hw"]
+[ext_resource type="Script" uid="uid://d3vpmj1p4xcdg" path="res://hole_trigger.gd" id="3_kl0hw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjl2i"]
 diffuse_mode = 2
@@ -28,6 +29,12 @@ absorbent = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v5i0k"]
 size = Vector3(100.615234, 13, 223.24658)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhh2s"]
+size = Vector3(18.945862, 18.321259, 19.918213)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_64sdq"]
+size = Vector3(18.945862, 18.321259, 19.918213)
 
 [node name="table" type="Node3D"]
 
@@ -311,3 +318,32 @@ physics_material_override = SubResource("PhysicsMaterial_kl0hw")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="base"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 64, -0.10827637)
 shape = SubResource("BoxShape3D_v5i0k")
+
+[node name="hole_trigger" type="Area3D" parent="."]
+script = ExtResource("3_kl0hw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="hole_trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.55618, 47.73371, -114.96848)
+shape = SubResource("BoxShape3D_bhh2s")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="hole_trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.617023, 47.73371, -114.96848)
+shape = SubResource("BoxShape3D_64sdq")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="hole_trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56, 47.734, 0)
+shape = SubResource("BoxShape3D_bhh2s")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="hole_trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 47.734, 0)
+shape = SubResource("BoxShape3D_64sdq")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="hole_trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.556, 47.734, 114.968)
+shape = SubResource("BoxShape3D_bhh2s")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="hole_trigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.617, 47.734, 114.968)
+shape = SubResource("BoxShape3D_64sdq")
+
+[connection signal="body_entered" from="hole_trigger" to="hole_trigger" method="_on_body_entered"]
