@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c8ali5gkj6u7x"]
+[gd_scene load_steps=17 format=3 uid="uid://c8ali5gkj6u7x"]
 
 [ext_resource type="PackedScene" uid="uid://bl0v2olhbqr1" path="res://table.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://buryci3fj4r0x" path="res://camera_3d.gd" id="2_7jktm"]
@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://c40x0ikjjnvo" path="res://cue.gd" id="4_eow3j"]
 [ext_resource type="Texture2D" uid="uid://bfnrr27xtmyt1" path="res://assets/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png" id="5_ryrav"]
 [ext_resource type="Script" uid="uid://bgna3p4ynwll8" path="res://cue_force.gd" id="6_ryrav"]
+[ext_resource type="Script" uid="uid://j22doqtgqwb0" path="res://arrow.gd" id="6_vef74"]
+[ext_resource type="PackedScene" uid="uid://baqtlja00chk7" path="res://arrow.tscn" id="8_j5wjh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fc0e3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -61,7 +63,7 @@ environment = SubResource("Environment_ryrav")
 [node name="table" parent="." instance=ExtResource("1_e2o6t")]
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("white_ball")]
-transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.5591929, 0, -0.5591929, 0.8290376, -1.5345688, 94.63759, 77.53363)
+transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.55919296, 0, -0.55919296, 0.8290376, -1.5345688, 94.63759, 77.53363)
 current = true
 script = ExtResource("2_7jktm")
 white_ball = NodePath("../white_ball")
@@ -109,6 +111,12 @@ shadow_enabled = true
 shadow_opacity = 0.45
 shadow_blur = 0.7
 directional_shadow_mode = 0
+
+[node name="Arrow" parent="." node_paths=PackedStringArray("white_ball", "camera") instance=ExtResource("8_j5wjh")]
+transform = Transform3D(1, 0, 0, 0, 0.9999077, 0.013613165, 0, -0.013613164, 0.9999076, -1.5345688, 70.964645, 44.697334)
+script = ExtResource("6_vef74")
+white_ball = NodePath("../white_ball")
+camera = NodePath("../Camera3D")
 
 [node name="white_ball" parent="." instance=ExtResource("2_feb5d")]
 transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, 0, 74.2, 57.098)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://baqtlja00chk7"]
+
+[ext_resource type="ArrayMesh" uid="uid://r8402scul2u0" path="res://assets/uploads_files_1842272_arrow.obj" id="1_l5ahi"]
+
+[node name="Arrow" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.1, 0.27279663, 0, 0)
+mesh = ExtResource("1_l5ahi")
