@@ -3,13 +3,14 @@ extends Camera3D
 @export var white_ball: RigidBody3D
 var azimuth: float = 0.0
 var elevation: float = PI / 4
-var sensitivity: float = 0.05
+var sensitivity: float = 0.025
 var direction: Vector3 = Vector3(0, 0, -1)
 var impulse_timer: float = 0.0;
 const impulse_max_time: float = 2;
 var impulse_force: float = 0.0;
 var impulse_dir: float = 1.0;
-const min_vel: float = 1.0;
+const min_vel: float = 1.0
+const cue_max_force: float = 300.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -51,6 +52,6 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_released() and event.keycode == KEY_SPACE:
-			white_ball.apply_impulse(direction * impulse_force * 200, Vector3(0, 1, 0))
+			white_ball.apply_impulse(direction * impulse_force * cue_max_force, Vector3(0, 1, 0))
 			impulse_timer = 0
 			impulse_force = 0

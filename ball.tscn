@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://yxvue3xhiaav" path="res://ball.gd" id="1_x8fbi"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x8fbi"]
-bounce = 0.5
+bounce = 0.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8fbi"]
 albedo_color = Color(0, 0.6851034, 0.8019823, 1)

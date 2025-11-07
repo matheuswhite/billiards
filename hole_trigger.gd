@@ -39,4 +39,5 @@ func _on_body_entered(body: Node3D) -> void:
 			win_game()
 	else:
 		points += ball_point
+		print("points: ", points)
 		body.queue_free()

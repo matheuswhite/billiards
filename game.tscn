@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c8ali5gkj6u7x"]
+[gd_scene load_steps=44 format=3 uid="uid://c8ali5gkj6u7x"]
 
 [ext_resource type="PackedScene" uid="uid://bl0v2olhbqr1" path="res://table.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://buryci3fj4r0x" path="res://camera_3d.gd" id="2_7jktm"]
@@ -13,6 +13,17 @@
 [ext_resource type="Texture2D" uid="uid://cl6vight6cv7y" path="res://assets/1762546064965.png" id="10_lc2xo"]
 [ext_resource type="Texture2D" uid="uid://dkmf0q5gv1psk" path="res://assets/1762546064960.png" id="11_215e1"]
 [ext_resource type="Texture2D" uid="uid://d1srtkqalbis7" path="res://assets/1762546064951.png" id="12_7sc4i"]
+[ext_resource type="Texture2D" uid="uid://b3apblonw5u2k" path="res://assets/1762546801407.png" id="13_f1jbl"]
+[ext_resource type="Texture2D" uid="uid://c0r6q2xegkde" path="res://assets/1762546801401.png" id="14_vaj68"]
+[ext_resource type="Texture2D" uid="uid://ch0i1t1vf3hw2" path="res://assets/1762546801398.png" id="15_i2p71"]
+[ext_resource type="Texture2D" uid="uid://2uylslfow1sw" path="res://assets/1762546801387.png" id="16_xa8c5"]
+[ext_resource type="Texture2D" uid="uid://j3mxv33f332r" path="res://assets/1762546801378.png" id="17_5b14r"]
+[ext_resource type="Texture2D" uid="uid://ca520sxrqq1vf" path="res://assets/1762546801369.png" id="18_bnpwn"]
+[ext_resource type="Texture2D" uid="uid://rdskeyua5cr8" path="res://assets/1762546801362.png" id="19_36jdj"]
+[ext_resource type="Texture2D" uid="uid://qtfln20vqxll" path="res://assets/IMG_20251107_172144.png" id="20_xfvwf"]
+[ext_resource type="Texture2D" uid="uid://cc5bufr33i6yt" path="res://assets/IMG_20251107_172217.png" id="21_dhpj7"]
+[ext_resource type="Texture2D" uid="uid://usbhv2f5yy1q" path="res://assets/IMG_20251107_172249.png" id="22_7knny"]
+[ext_resource type="Texture2D" uid="uid://dry437y7lrx5r" path="res://assets/IMG_20251107_172351.png" id="23_082n1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fc0e3"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -55,6 +66,72 @@ roughness = 0.14
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80cx4"]
 albedo_texture = ExtResource("12_7sc4i")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xex6t"]
+albedo_texture = ExtResource("13_f1jbl")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aa0lp"]
+albedo_texture = ExtResource("14_vaj68")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iu0sx"]
+albedo_texture = ExtResource("15_i2p71")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4v2jo"]
+albedo_texture = ExtResource("16_xa8c5")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1i01"]
+albedo_texture = ExtResource("17_5b14r")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r62pu"]
+albedo_texture = ExtResource("18_bnpwn")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_klri6"]
+albedo_texture = ExtResource("19_36jdj")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eu6ph"]
+albedo_texture = ExtResource("20_xfvwf")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edr7y"]
+albedo_texture = ExtResource("21_dhpj7")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kq12w"]
+albedo_texture = ExtResource("22_7knny")
+metallic = 0.15
+metallic_specular = 0.17
+roughness = 0.14
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t46w6"]
+albedo_texture = ExtResource("23_082n1")
 metallic = 0.15
 metallic_specular = 0.17
 roughness = 0.14
@@ -127,20 +204,64 @@ transform = Transform3D(1.0000001, 0, 0, 0, 0.99999994, 0, 0, 0, 1.0000001, 0, 7
 material = SubResource("StandardMaterial3D_7jktm")
 
 [node name="ball1" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.354841, 74.2, -67.05737)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 74.2, -60)
 material = SubResource("StandardMaterial3D_ryrav")
 
 [node name="ball2" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(-0.017888635, 0, 0.99984, 0, 0.9999999, 0, -0.99984, 0, -0.017888695, -0.5013962, 74.2, -60.52545)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 0.9999999, 0, -1, 0, -4.371139e-08, -4.894943, 74.2, -65.88063)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="ball3" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, 3.6476173, 74.2, -66.85764)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 4.765518, 74.2, -66.1007)
 material = SubResource("StandardMaterial3D_j5wjh")
 
 [node name="ball4" parent="." instance=ExtResource("2_feb5d")]
-transform = Transform3D(1, 0, 0, 0, 1.0000001, 0, 0, 0, 1.0000001, -0.22797108, 74.2, -73.83804)
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -9.272508, 74.2, -71.86696)
 material = SubResource("StandardMaterial3D_80cx4")
+
+[node name="ball5" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0.08163738, 74.2, -71.959236)
+material = SubResource("StandardMaterial3D_xex6t")
+
+[node name="ball6" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 9.784114, 74.2, -72.06646)
+material = SubResource("StandardMaterial3D_aa0lp")
+
+[node name="ball7" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -14.214513, 74.2, -77.50631)
+material = SubResource("StandardMaterial3D_iu0sx")
+
+[node name="ball8" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -4.6229677, 74.2, -77.84736)
+material = SubResource("StandardMaterial3D_4v2jo")
+
+[node name="ball9" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 5.060561, 74.2, -77.5718)
+material = SubResource("StandardMaterial3D_l1i01")
+
+[node name="ball10" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 15.24921, 74.2, -77.56411)
+material = SubResource("StandardMaterial3D_r62pu")
+
+[node name="ball11" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -18.478516, 74.2, -83.94613)
+material = SubResource("StandardMaterial3D_klri6")
+
+[node name="ball12" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, -9.717641, 74.2, -84.2372)
+material = SubResource("StandardMaterial3D_eu6ph")
+
+[node name="ball13" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 0.36790347, 74.2, -84.19889)
+material = SubResource("StandardMaterial3D_edr7y")
+
+[node name="ball14" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 10.5876, 74.2, -84.080124)
+material = SubResource("StandardMaterial3D_kq12w")
+
+[node name="ball15" parent="." instance=ExtResource("2_feb5d")]
+transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.3711392e-08, 20.569899, 74.2, -84.44398)
+material = SubResource("StandardMaterial3D_t46w6")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
