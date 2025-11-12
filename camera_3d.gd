@@ -11,6 +11,7 @@ var impulse_force: float = 0.0;
 var impulse_dir: float = 1.0;
 const min_vel: float = 1.0
 const cue_max_force: float = 300.0
+@onready var sound = $AudioStreamPlayer3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -52,6 +53,9 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_released() and event.keycode == KEY_SPACE:
+			if white_ball.linear_velocity.length() < min_vel:
+				sound.play()
 			white_ball.apply_impulse(direction * impulse_force * cue_max_force, Vector3(0, 1, 0))
 			impulse_timer = 0
 			impulse_force = 0
+			
