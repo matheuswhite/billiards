@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ddbb3tgky8ew4"]
+
+[ext_resource type="Texture2D" uid="uid://cbmp5mo7747l8" path="res://assets/brick_material/diffuse.jpg" id="1_58r55"]
+[ext_resource type="Texture2D" uid="uid://d3jmiwywhqw3t" path="res://assets/brick_material/displace.jpg" id="2_q0i85"]
+[ext_resource type="Texture2D" uid="uid://cq8axlxg3r3nt" path="res://assets/brick_material/normal.png" id="3_e7h2e"]
+[ext_resource type="Texture2D" uid="uid://c0cgp1s4y8b7h" path="res://assets/brick_material/roughness.png" id="4_hed42"]
+
+[resource]
+albedo_texture = ExtResource("1_58r55")
+roughness_texture = ExtResource("4_hed42")
+normal_enabled = true
+normal_texture = ExtResource("3_e7h2e")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_q0i85")
+uv1_scale = Vector3(4, 2, 1)

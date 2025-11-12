@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://7uyrtf8yc6gm"]
+
+[ext_resource type="Texture2D" uid="uid://dccgujbw7eo6d" path="res://assets/MATERIALS/LEATHER/Leather_011_basecolor.jpg" id="1_5mefg"]
+[ext_resource type="Texture2D" uid="uid://bhbw88xtufa3r" path="res://assets/MATERIALS/LEATHER/Leather_011_ambientOcclusion.jpg" id="2_85urr"]
+[ext_resource type="Texture2D" uid="uid://ctg2lpp5fb3q0" path="res://assets/MATERIALS/LEATHER/Leather_011_height.png" id="3_nixjx"]
+[ext_resource type="Texture2D" uid="uid://cvhfa65168ocg" path="res://assets/MATERIALS/LEATHER/Leather_011_normal.jpg" id="4_tomlg"]
+[ext_resource type="Texture2D" uid="uid://u8mqni65gn1t" path="res://assets/MATERIALS/LEATHER/Leather_011_roughness.jpg" id="5_6dmrk"]
+
+[resource]
+albedo_color = Color(0.48896492, 0.27896327, 4.813075e-08, 1)
+albedo_texture = ExtResource("1_5mefg")
+roughness_texture = ExtResource("5_6dmrk")
+normal_enabled = true
+normal_texture = ExtResource("4_tomlg")
+ao_enabled = true
+ao_texture = ExtResource("2_85urr")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_nixjx")

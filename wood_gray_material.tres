@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bro14avdlr61n"]
+
+[ext_resource type="Texture2D" uid="uid://wrfs55tbdra0" path="res://assets/MATERIALS/WOOD/Wood_027_roughness.jpg" id="1_p4b8y"]
+
+[resource]
+albedo_texture = ExtResource("1_p4b8y")

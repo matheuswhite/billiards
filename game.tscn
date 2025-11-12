@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=3 uid="uid://c8ali5gkj6u7x"]
+[gd_scene load_steps=104 format=3 uid="uid://c8ali5gkj6u7x"]
 
 [ext_resource type="PackedScene" uid="uid://bl0v2olhbqr1" path="res://table.tscn" id="1_e2o6t"]
 [ext_resource type="Script" uid="uid://buryci3fj4r0x" path="res://camera_3d.gd" id="2_7jktm"]
@@ -36,18 +36,18 @@
 [ext_resource type="ArrayMesh" uid="uid://cnoc3b1njkel5" path="res://assets/table_bar.obj" id="26_i2p71"]
 [ext_resource type="Texture2D" uid="uid://oevcycasjkdp" path="res://assets/MATERIALS/METAL/Metal_006_roughness.jpg" id="27_xfvwf"]
 [ext_resource type="Material" uid="uid://cgwh12kb4oipm" path="res://metal_material.tres" id="28_7knny"]
-[ext_resource type="Material" uid="uid://6tps6s2ee5rd" path="res://ball_material.tres" id="28_xfvwf"]
-[ext_resource type="Texture2D" uid="uid://u8mqni65gn1t" path="res://assets/MATERIALS/LEATHER/Leather_011_roughness.jpg" id="29_dhpj7"]
+[ext_resource type="Texture2D" uid="uid://6jwtx2fibq5c" path="res://assets/wood_floor/Wood_Floor_001_Diffiuse.jpg" id="30_m28ev"]
+[ext_resource type="Material" uid="uid://cfmvkubq4ygdl" path="res://wood_floor_material.tres" id="34_t46w6"]
+[ext_resource type="Material" uid="uid://bro14avdlr61n" path="res://wood_gray_material.tres" id="35_87ddb"]
+[ext_resource type="Texture2D" uid="uid://bbko4v3wqgxi0" path="res://assets/wood_floor/Wood_Floor_001_Normal.jpg" id="35_lwlx3"]
+[ext_resource type="Material" uid="uid://ok7mxr7t403j" path="res://lether_material.tres" id="36_0de7l"]
+[ext_resource type="Material" uid="uid://7uyrtf8yc6gm" path="res://lether_brown_material.tres" id="36_87ddb"]
 [ext_resource type="Material" uid="uid://gdk0ruqwpdvk" path="res://wood_material.tres" id="36_aa0lp"]
+[ext_resource type="Texture2D" uid="uid://b6dowmp8y7huk" path="res://assets/wood_floor/Wood_Floor_001_Roughness.png" id="36_lwlx3"]
 [ext_resource type="ArrayMesh" uid="uid://bmvmjaf4x8l17" path="res://assets/DRINK NEON.obj" id="40_klri6"]
-[ext_resource type="Texture2D" uid="uid://bd14xl3vw4mkq" path="res://assets/plastic.jpg" id="41_eu6ph"]
-[ext_resource type="ArrayMesh" uid="uid://d36aa427hl7c0" path="res://assets/NeonSignOpen.obj" id="42_eu6ph"]
-[ext_resource type="Texture2D" uid="uid://dtlpjqdbo8j77" path="res://assets/NeonSignOpenAlbedo.png" id="43_lwlx3"]
-[ext_resource type="Texture2D" uid="uid://dkf4s8prihh47" path="res://assets/NeonSignOpenEmissiv.png" id="44_0de7l"]
-[ext_resource type="Texture2D" uid="uid://dhm4csoaya6iw" path="res://assets/NeonSignOpenAO.jpg" id="44_87ddb"]
-[ext_resource type="Texture2D" uid="uid://dijvsck4uprlv" path="res://assets/NeonSignOpenMetal.png" id="45_87ddb"]
-[ext_resource type="Texture2D" uid="uid://c8e7ct2vh653r" path="res://assets/NeonSignOpenNormal.png" id="46_mljfx"]
-[ext_resource type="Texture2D" uid="uid://dgo0e5nyjxxm5" path="res://assets/NeonSignOpenRough.png" id="47_qpefm"]
+[ext_resource type="Material" uid="uid://ddbb3tgky8ew4" path="res://brick_material.tres" id="40_t46w6"]
+[ext_resource type="ArrayMesh" uid="uid://cc86dafbtlq2h" path="res://assets/uploads_files_3300784_Door1.obj" id="43_edr7y"]
+[ext_resource type="Material" uid="uid://cx5j1tjiapm6c" path="res://neon_pink.tres" id="48_87ddb"]
 [ext_resource type="ArrayMesh" uid="uid://tu5usfa648jj" path="res://assets/Light_modules_Set_01_Neon_.obj" id="49_87ddb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fc0e3"]
@@ -61,6 +61,8 @@ sky_material = SubResource("ProceduralSkyMaterial_fc0e3")
 background_mode = 2
 sky = SubResource("Sky_7jktm")
 tonemap_mode = 2
+tonemap_exposure = 0.5
+sdfgi_use_occlusion = true
 glow_enabled = true
 glow_bloom = 0.12
 glow_blend_mode = 1
@@ -68,6 +70,8 @@ glow_hdr_threshold = 0.8
 glow_hdr_scale = 1.5
 fog_mode = 1
 fog_density = 0.02
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.005
 adjustment_enabled = true
 adjustment_saturation = 1.2
 
@@ -189,12 +193,6 @@ albedo_texture = ExtResource("26_36jdj")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_87ddb"]
 albedo_texture = ExtResource("27_xfvwf")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfc7e"]
-albedo_texture = ExtResource("26_36jdj")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v33yl"]
-albedo_texture = ExtResource("29_dhpj7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1jbl"]
 transparency = 1
@@ -381,25 +379,11 @@ material = SubResource("StandardMaterial3D_xa8c5")
 [sub_resource type="QuadMesh" id="QuadMesh_xfvwf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ib7ph"]
-albedo_texture = ExtResource("41_eu6ph")
-emission_enabled = true
-emission = Color(0.9999998, 0.07269279, 0.936847, 1)
-emission_energy_multiplier = 10.0
-grow = true
-grow_amount = 0.02
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vuohh"]
-albedo_texture = ExtResource("43_lwlx3")
-metallic = 1.0
-metallic_texture = ExtResource("45_87ddb")
-roughness_texture = ExtResource("47_qpefm")
-emission_enabled = true
-emission_energy_multiplier = 5.0
-emission_texture = ExtResource("44_0de7l")
+albedo_texture = ExtResource("30_m28ev")
+roughness_texture = ExtResource("36_lwlx3")
 normal_enabled = true
-normal_texture = ExtResource("46_mljfx")
-ao_enabled = true
-ao_texture = ExtResource("44_87ddb")
+normal_texture = ExtResource("35_lwlx3")
+uv1_scale = Vector3(10, 10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3gvs5"]
 emission_enabled = true
@@ -414,7 +398,7 @@ environment = SubResource("Environment_ryrav")
 [node name="table" parent="." instance=ExtResource("1_e2o6t")]
 
 [node name="Camera3D" type="Camera3D" parent="." node_paths=PackedStringArray("white_ball")]
-transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.55919296, 0, -0.55919296, 0.8290376, -1.5345688, 94.63759, 77.53363)
+transform = Transform3D(1, 0, 0, 0, 0.8290376, 0.55919296, 0, -0.55919296, 0.8290376, 0.5893631, 94.63759, 77.53363)
 current = true
 script = ExtResource("2_7jktm")
 white_ball = NodePath("../ball_white")
@@ -449,6 +433,13 @@ light_energy = 8.0
 light_specular = 15.0
 omni_range = 15.0
 
+[node name="OmniLight3D2" type="OmniLight3D" parent="CeilingLight"]
+transform = Transform3D(1.07284436e-07, -1, 5.3732496e-08, 1.4063313e-07, -5.373248e-08, -1, 1, 1.0728444e-07, 1.4063313e-07, 0, -70, 0)
+light_color = Color(1, 0.827451, 0.2, 1)
+light_energy = 70.0
+light_volumetric_fog_energy = 0.5
+omni_range = 260.48523
+
 [node name="CeilingLight2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74980164, 207.5599, 77.8121)
 mesh = ExtResource("5_082n1")
@@ -471,6 +462,13 @@ light_color = Color(1, 0.827451, 0.2, 1)
 light_energy = 8.0
 light_specular = 15.0
 omni_range = 15.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CeilingLight2"]
+transform = Transform3D(1.07284436e-07, -1, 5.3732496e-08, 1.4063313e-07, -5.373248e-08, -1, 1, 1.0728444e-07, 1.4063313e-07, 0, -70, 0)
+light_color = Color(1, 0.827451, 0.2, 1)
+light_energy = 70.0
+light_volumetric_fog_energy = 0.5
+omni_range = 260.48523
 
 [node name="CeilingLight3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.74980164, 207.5599, -75.38338)
@@ -496,10 +494,16 @@ light_energy = 8.0
 light_specular = 15.0
 omni_range = 15.0
 
+[node name="OmniLight3D2" type="OmniLight3D" parent="CeilingLight3"]
+transform = Transform3D(1.07284436e-07, -1, 5.3732496e-08, 1.4063313e-07, -5.373248e-08, -1, 1, 1.0728444e-07, 1.4063313e-07, 0, -70, 0)
+light_color = Color(1, 0.827451, 0.2, 1)
+light_energy = 70.0
+light_volumetric_fog_energy = 0.5
+omni_range = 260.48523
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.7071068, 0.64597416, 0.2876063, 0, -0.4067367, 0.9135454, 0.7071068, -0.64597416, -0.2876063, 0, 200, 0)
-visible = false
-light_angular_distance = 5.0
+light_energy = 0.05
 shadow_enabled = true
 shadow_opacity = 0.45
 shadow_blur = 0.7
@@ -576,15 +580,61 @@ transform = Transform3D(-4.371139e-08, 0, 1.0000001, 0, 1.0000001, 0, -1, 0, -4.
 material = SubResource("StandardMaterial3D_t46w6")
 
 [node name="TableBar" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -217.63008, -0.6741257, -446.094)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -31.353592, -0.6741257, -322.98453)
 mesh = ExtResource("26_i2p71")
 surface_material_override/0 = SubResource("StandardMaterial3D_7knny")
 surface_material_override/1 = SubResource("StandardMaterial3D_lwlx3")
 surface_material_override/2 = SubResource("StandardMaterial3D_87ddb")
-surface_material_override/5 = ExtResource("28_7knny")
-surface_material_override/6 = SubResource("StandardMaterial3D_cfc7e")
-surface_material_override/14 = ExtResource("28_xfvwf")
-surface_material_override/15 = SubResource("StandardMaterial3D_v33yl")
+surface_material_override/3 = ExtResource("28_7knny")
+surface_material_override/4 = ExtResource("28_7knny")
+surface_material_override/5 = ExtResource("34_t46w6")
+surface_material_override/6 = ExtResource("35_87ddb")
+surface_material_override/7 = ExtResource("28_7knny")
+surface_material_override/8 = ExtResource("35_87ddb")
+surface_material_override/9 = ExtResource("35_87ddb")
+surface_material_override/10 = ExtResource("35_87ddb")
+surface_material_override/11 = ExtResource("36_0de7l")
+surface_material_override/12 = ExtResource("36_87ddb")
+surface_material_override/13 = ExtResource("28_7knny")
+surface_material_override/14 = ExtResource("28_7knny")
+surface_material_override/15 = ExtResource("36_0de7l")
+surface_material_override/16 = ExtResource("36_87ddb")
+surface_material_override/17 = ExtResource("28_7knny")
+surface_material_override/18 = ExtResource("28_7knny")
+surface_material_override/19 = ExtResource("36_0de7l")
+surface_material_override/20 = ExtResource("36_87ddb")
+surface_material_override/21 = ExtResource("28_7knny")
+surface_material_override/22 = ExtResource("28_7knny")
+surface_material_override/23 = ExtResource("36_0de7l")
+surface_material_override/24 = ExtResource("36_87ddb")
+surface_material_override/25 = ExtResource("28_7knny")
+surface_material_override/26 = ExtResource("28_7knny")
+surface_material_override/27 = ExtResource("36_0de7l")
+surface_material_override/28 = ExtResource("36_87ddb")
+surface_material_override/29 = ExtResource("28_7knny")
+surface_material_override/30 = ExtResource("28_7knny")
+surface_material_override/31 = ExtResource("36_0de7l")
+surface_material_override/32 = ExtResource("36_87ddb")
+surface_material_override/33 = ExtResource("28_7knny")
+surface_material_override/34 = ExtResource("28_7knny")
+surface_material_override/35 = ExtResource("35_87ddb")
+surface_material_override/36 = ExtResource("28_7knny")
+surface_material_override/37 = ExtResource("36_87ddb")
+surface_material_override/38 = ExtResource("36_0de7l")
+surface_material_override/39 = ExtResource("28_7knny")
+surface_material_override/40 = ExtResource("36_87ddb")
+surface_material_override/41 = ExtResource("28_7knny")
+surface_material_override/42 = ExtResource("28_7knny")
+surface_material_override/43 = ExtResource("36_0de7l")
+surface_material_override/44 = ExtResource("36_0de7l")
+surface_material_override/45 = ExtResource("36_87ddb")
+surface_material_override/46 = ExtResource("28_7knny")
+surface_material_override/47 = ExtResource("28_7knny")
+surface_material_override/48 = ExtResource("36_0de7l")
+surface_material_override/49 = ExtResource("36_87ddb")
+surface_material_override/50 = ExtResource("28_7knny")
+surface_material_override/51 = ExtResource("28_7knny")
+surface_material_override/52 = ExtResource("36_aa0lp")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -734,50 +784,64 @@ skeleton = NodePath("../../../../../../Camera3D")
 script = ExtResource("25_vaj68")
 
 [node name="wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(1155.9596, 0, 0, 0, 354.33536, 0, 0, 0, 0.9999999, -36.09371, 127.827576, -559.87726)
+transform = Transform3D(1155.9596, 0, 0, 0, 354.33536, 0, 0, 0, 0.9999999, -36.09371, 127.827576, -454.5903)
 mesh = SubResource("QuadMesh_xfvwf")
-surface_material_override/0 = ExtResource("36_aa0lp")
-
-[node name="DrinkNeon" type="MeshInstance3D" parent="wall"]
-transform = Transform3D(0.047042057, 0, 0, 0, 0.08916913, 0, 0, 0, 1.0000001, 0.18282577, 0.0041992664, 0)
-mesh = ExtResource("40_klri6")
-skeleton = NodePath("../../CeilingLight")
-surface_material_override/0 = SubResource("StandardMaterial3D_ib7ph")
+surface_material_override/0 = ExtResource("40_t46w6")
 
 [node name="wall2" type="MeshInstance3D" parent="."]
-transform = Transform3D(-1155.9596, 0, -8.742277e-08, 0, 354.33536, 0, 0.000101057194, 0, -0.9999999, -36.09371, 127.827576, 263.9008)
+transform = Transform3D(-1155.9596, 0, -8.742277e-08, 0, 354.33536, 0, 0.000101057194, 0, -0.9999999, -36.09371, 127.827576, 192.18591)
 mesh = SubResource("QuadMesh_xfvwf")
+surface_material_override/0 = ExtResource("40_t46w6")
+
+[node name="UploadsFiles3300784Door1" type="MeshInstance3D" parent="wall2"]
+transform = Transform3D(-3.7813934e-09, 0, -0.08650823, 0, 0.28221852, 0, 100.000015, 0, -4.37114e-06, -0.18, -0.36, 0)
+mesh = ExtResource("43_edr7y")
+skeleton = NodePath("../..")
 surface_material_override/0 = ExtResource("36_aa0lp")
+surface_material_override/1 = ExtResource("28_7knny")
+surface_material_override/2 = ExtResource("28_7knny")
 
 [node name="wall3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.0528597e-05, 0, 0.9999999, 0, 354.33536, 0, -1155.9596, 0, -4.3711385e-08, -380.2991, 127.827576, -163.7107)
+transform = Transform3D(-5.0528597e-05, 0, 0.9999999, 0, 354.33536, 0, -1155.9596, 0, -4.3711385e-08, -130.97433, 127.827576, -163.7107)
 mesh = SubResource("QuadMesh_xfvwf")
-surface_material_override/0 = ExtResource("36_aa0lp")
+surface_material_override/0 = ExtResource("40_t46w6")
 
-[node name="NeonSignOpen" type="MeshInstance3D" parent="wall3"]
-transform = Transform3D(0.009000001, 0, 6.938894e-18, 0, 0.027000004, 0, 0, 0, 1.5000001, 0.070840105, 0.15747157, 0)
-mesh = ExtResource("42_eu6ph")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_vuohh")
+[node name="DrinkNeon" type="MeshInstance3D" parent="wall3"]
+transform = Transform3D(0.047000024, 0, -1.1126557e-13, 0, 0.10000007, 0, 1.8189894e-12, 0, 0.006000002, 0.1505243, 0.039510608, 2.5001068)
+mesh = ExtResource("40_klri6")
+skeleton = NodePath("../../CeilingLight")
+surface_material_override/0 = ExtResource("48_87ddb")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="wall3/DrinkNeon"]
+transform = Transform3D(1, 0, -2.4706483e-11, 0, 1, 0, 2.4706483e-11, 0, 1, -0.42333794, 1.8817892, 6676.628)
+light_color = Color(1, 0.07450981, 0.9372549, 1)
+light_energy = 100.0
+light_volumetric_fog_energy = 3.0
+omni_range = 365.0
 
 [node name="wall4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.0528597e-05, 0, -0.9999999, 0, 354.33536, 0, 1155.9596, 0, -4.3711385e-08, 345.71472, 127.827576, -167.13611)
+transform = Transform3D(-5.0528597e-05, 0, -0.9999999, 0, 354.33536, 0, 1155.9596, 0, -4.3711385e-08, 262.40973, 127.827576, -167.13611)
 mesh = SubResource("QuadMesh_xfvwf")
-surface_material_override/0 = ExtResource("36_aa0lp")
+surface_material_override/0 = ExtResource("40_t46w6")
 
 [node name="roof" type="MeshInstance3D" parent="."]
 transform = Transform3D(-6.704612e-05, -1101.0612, 4.371138e-08, 0, -4.8128917e-05, -0.99999976, 1533.8365, -4.8128917e-05, 1.910685e-15, 0, 269.957, 0)
 mesh = SubResource("QuadMesh_xfvwf")
-surface_material_override/0 = ExtResource("36_aa0lp")
+surface_material_override/0 = SubResource("StandardMaterial3D_ib7ph")
 
 [node name="LightModulesSet01Neon" type="MeshInstance3D" parent="roof"]
-transform = Transform3D(0.014, 1.3877788e-16, -9.926167e-24, -2.7755576e-16, 0.013999999, 3.8857806e-16, -1.6940659e-20, 5.684342e-14, 20, 2.98247e-09, 0.09504934, -0.4164734)
-mesh = ExtResource("49_87ddb")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_3gvs5")
-
-[node name="LightModulesSet01Neon2" type="MeshInstance3D" parent="roof"]
 transform = Transform3D(0.014, 2.220446e-16, -1.15805286e-23, -3.8857806e-16, 0.013999999, 6.1062266e-16, -2.3716923e-20, 5.684342e-14, 20, -4.9181916e-09, -0.15673949, -0.4164734)
 mesh = ExtResource("49_87ddb")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_3gvs5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="roof/LightModulesSet01Neon"]
+transform = Transform3D(-1, -1.509958e-07, 6.600236e-15, 0, -4.371139e-08, -1, 1.509958e-07, -1, 4.371139e-08, 8.151923e-08, 2.597968, 1.2209778)
+light_color = Color(0.22352941, 0.7490196, 0, 1)
+light_energy = 200.0
+light_volumetric_fog_energy = 0.5
+omni_range = 368.4532
+
+[node name="ToNormal" type="Node" parent="."]
+
+[node name="InvertGlossiness" type="Node" parent="."]
