@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://u8mqni65gn1t"
 path.s3tc="res://.godot/imported/Leather_011_roughness.jpg-0400a250c75ff1e72f4b4c5ffddbce97.s3tc.ctex"
+path.etc2="res://.godot/imported/Leather_011_roughness.jpg-0400a250c75ff1e72f4b4c5ffddbce97.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/MATERIALS/LEATHER/Leather_011_roughness.jpg"
-dest_files=["res://.godot/imported/Leather_011_roughness.jpg-0400a250c75ff1e72f4b4c5ffddbce97.s3tc.ctex"]
+dest_files=["res://.godot/imported/Leather_011_roughness.jpg-0400a250c75ff1e72f4b4c5ffddbce97.s3tc.ctex", "res://.godot/imported/Leather_011_roughness.jpg-0400a250c75ff1e72f4b4c5ffddbce97.etc2.ctex"]
 
 [params]
 

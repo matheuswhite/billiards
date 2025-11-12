@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhbw88xtufa3r"
 path.s3tc="res://.godot/imported/Leather_011_ambientOcclusion.jpg-22b7a6d2cb0b4de2ba4e28191bb60a31.s3tc.ctex"
+path.etc2="res://.godot/imported/Leather_011_ambientOcclusion.jpg-22b7a6d2cb0b4de2ba4e28191bb60a31.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/MATERIALS/LEATHER/Leather_011_ambientOcclusion.jpg"
-dest_files=["res://.godot/imported/Leather_011_ambientOcclusion.jpg-22b7a6d2cb0b4de2ba4e28191bb60a31.s3tc.ctex"]
+dest_files=["res://.godot/imported/Leather_011_ambientOcclusion.jpg-22b7a6d2cb0b4de2ba4e28191bb60a31.s3tc.ctex", "res://.godot/imported/Leather_011_ambientOcclusion.jpg-22b7a6d2cb0b4de2ba4e28191bb60a31.etc2.ctex"]
 
 [params]
 

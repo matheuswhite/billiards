@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dijvsck4uprlv"
 path.s3tc="res://.godot/imported/NeonSignOpenMetal.png-8872773eb3809a89a2b7725b6afa614e.s3tc.ctex"
+path.etc2="res://.godot/imported/NeonSignOpenMetal.png-8872773eb3809a89a2b7725b6afa614e.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/NeonSignOpenMetal.png"
-dest_files=["res://.godot/imported/NeonSignOpenMetal.png-8872773eb3809a89a2b7725b6afa614e.s3tc.ctex"]
+dest_files=["res://.godot/imported/NeonSignOpenMetal.png-8872773eb3809a89a2b7725b6afa614e.s3tc.ctex", "res://.godot/imported/NeonSignOpenMetal.png-8872773eb3809a89a2b7725b6afa614e.etc2.ctex"]
 
 [params]
 

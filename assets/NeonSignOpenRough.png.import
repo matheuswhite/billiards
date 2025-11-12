@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgo0e5nyjxxm5"
 path.s3tc="res://.godot/imported/NeonSignOpenRough.png-1dc1085c35fc328466db1af796490a70.s3tc.ctex"
+path.etc2="res://.godot/imported/NeonSignOpenRough.png-1dc1085c35fc328466db1af796490a70.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/NeonSignOpenRough.png"
-dest_files=["res://.godot/imported/NeonSignOpenRough.png-1dc1085c35fc328466db1af796490a70.s3tc.ctex"]
+dest_files=["res://.godot/imported/NeonSignOpenRough.png-1dc1085c35fc328466db1af796490a70.s3tc.ctex", "res://.godot/imported/NeonSignOpenRough.png-1dc1085c35fc328466db1af796490a70.etc2.ctex"]
 
 [params]
 

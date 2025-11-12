@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6dowmp8y7huk"
 path.s3tc="res://.godot/imported/Wood_Floor_001_Roughness.png-5ff00159e03c51bd80d5225dca68d654.s3tc.ctex"
+path.etc2="res://.godot/imported/Wood_Floor_001_Roughness.png-5ff00159e03c51bd80d5225dca68d654.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/wood_floor/Wood_Floor_001_Roughness.png"
-dest_files=["res://.godot/imported/Wood_Floor_001_Roughness.png-5ff00159e03c51bd80d5225dca68d654.s3tc.ctex"]
+dest_files=["res://.godot/imported/Wood_Floor_001_Roughness.png-5ff00159e03c51bd80d5225dca68d654.s3tc.ctex", "res://.godot/imported/Wood_Floor_001_Roughness.png-5ff00159e03c51bd80d5225dca68d654.etc2.ctex"]
 
 [params]
 

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://8lriqi0pxkeu"
 path.s3tc="res://.godot/imported/bump.jpg-e60b8685f0ae5997292e6cd922eea211.s3tc.ctex"
+path.etc2="res://.godot/imported/bump.jpg-e60b8685f0ae5997292e6cd922eea211.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/brick_material/bump.jpg"
-dest_files=["res://.godot/imported/bump.jpg-e60b8685f0ae5997292e6cd922eea211.s3tc.ctex"]
+dest_files=["res://.godot/imported/bump.jpg-e60b8685f0ae5997292e6cd922eea211.s3tc.ctex", "res://.godot/imported/bump.jpg-e60b8685f0ae5997292e6cd922eea211.etc2.ctex"]
 
 [params]
 

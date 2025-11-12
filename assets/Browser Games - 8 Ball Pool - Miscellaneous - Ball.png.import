@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfnrr27xtmyt1"
 path.s3tc="res://.godot/imported/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png-137ff813316531bc5e1172a2c6c170f2.s3tc.ctex"
+path.etc2="res://.godot/imported/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png-137ff813316531bc5e1172a2c6c170f2.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png"
-dest_files=["res://.godot/imported/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png-137ff813316531bc5e1172a2c6c170f2.s3tc.ctex"]
+dest_files=["res://.godot/imported/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png-137ff813316531bc5e1172a2c6c170f2.s3tc.ctex", "res://.godot/imported/Browser Games - 8 Ball Pool - Miscellaneous - Ball.png-137ff813316531bc5e1172a2c6c170f2.etc2.ctex"]
 
 [params]
 

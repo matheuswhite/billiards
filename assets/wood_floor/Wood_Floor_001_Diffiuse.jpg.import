@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://6jwtx2fibq5c"
 path.s3tc="res://.godot/imported/Wood_Floor_001_Diffiuse.jpg-f4fbd4930565bb1ef7d8d931cb115e68.s3tc.ctex"
+path.etc2="res://.godot/imported/Wood_Floor_001_Diffiuse.jpg-f4fbd4930565bb1ef7d8d931cb115e68.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/wood_floor/Wood_Floor_001_Diffiuse.jpg"
-dest_files=["res://.godot/imported/Wood_Floor_001_Diffiuse.jpg-f4fbd4930565bb1ef7d8d931cb115e68.s3tc.ctex"]
+dest_files=["res://.godot/imported/Wood_Floor_001_Diffiuse.jpg-f4fbd4930565bb1ef7d8d931cb115e68.s3tc.ctex", "res://.godot/imported/Wood_Floor_001_Diffiuse.jpg-f4fbd4930565bb1ef7d8d931cb115e68.etc2.ctex"]
 
 [params]
 

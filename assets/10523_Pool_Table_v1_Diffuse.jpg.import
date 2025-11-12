@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://b76m0s3ki057p"
 path.s3tc="res://.godot/imported/10523_Pool_Table_v1_Diffuse.jpg-d05a49f51787352fe2d8d668291a8762.s3tc.ctex"
+path.etc2="res://.godot/imported/10523_Pool_Table_v1_Diffuse.jpg-d05a49f51787352fe2d8d668291a8762.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://assets/10523_Pool_Table_v1_Diffuse.jpg"
-dest_files=["res://.godot/imported/10523_Pool_Table_v1_Diffuse.jpg-d05a49f51787352fe2d8d668291a8762.s3tc.ctex"]
+dest_files=["res://.godot/imported/10523_Pool_Table_v1_Diffuse.jpg-d05a49f51787352fe2d8d668291a8762.s3tc.ctex", "res://.godot/imported/10523_Pool_Table_v1_Diffuse.jpg-d05a49f51787352fe2d8d668291a8762.etc2.ctex"]
 
 [params]
 
